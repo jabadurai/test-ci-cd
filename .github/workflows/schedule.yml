@@ -3,10 +3,10 @@ name: daily-scheduler
 on:
   schedule:
     - cron: "*/5 * * * *"   # 01:50 UTC = 7:50 pm CST (UTC-6)
-  workflow_dispatch:
 
 jobs:
   run-daily:
+    name: Daily Sheduler
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
